@@ -1,6 +1,6 @@
 Priyanka R — Portfolio
 
-Personal portfolio website for Priyanka R, BCA graduate and aspiring Data Analyst.
+Personal portfolio website for Priyanka R, BCA graduate and Aspiring Data Analyst.
 
 🔗 Live site: https://priyanka-r05.github.io/Portfolio/
 

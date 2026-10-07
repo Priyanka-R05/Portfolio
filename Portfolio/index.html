@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Priyanka R - BCA graduate and aspiring data analyst. Python, SQL, Power BI, Tableau, Excel.">
+<title>Priyanka R | Aspiring Data Analyst</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10292B; --ink2:#173A3D; --sand:#EFE9DC; --sand2:#E3DBC9;
+  --gold:#B8924A; --gold-dk:#8A6A2A; --gold-lt:#D9B872;
+  --text-d:#22302F; --text-l:#E9EFEA; --mute-d:#4F5C5A; --mute-l:#A9BDB8;
+  --name:'Cormorant Garamond',Georgia,serif;
+  --head:'Jost','Segoe UI',system-ui,sans-serif;
+  --body:'Figtree','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);font-size:1.05rem;line-height:1.65;color:var(--text-d);background:var(--sand)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.15}
+h2{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:400;letter-spacing:.06em;margin-bottom:12px}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--gold);margin-top:14px}
+.lead{max-width:60ch;margin-bottom:28px}
+section{padding:88px 0}
+.light{background:var(--sand);color:var(--text-d)}
+.light p,.light li{color:var(--mute-d)}
+.dark{background:var(--ink);color:var(--text-l)}
+.dark p,.dark li{color:var(--mute-l)}
+.dark h2::after{background:var(--gold-lt)}
+.nm{font-family:var(--name);font-weight:600;letter-spacing:.06em}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:1px solid rgba(217,184,114,.35)}
+nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--name);font-weight:700;font-size:1.5rem;letter-spacing:.14em;text-decoration:none;color:var(--gold-lt)}
+nav ul{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:var(--text-l);font-size:.93rem;font-weight:500;opacity:.85}
+nav ul a:hover{opacity:1;color:var(--gold-lt)}
+
+/* hero: two shades */
+.hero{display:grid;grid-template-columns:1.3fr .7fr;min-height:calc(100vh - 62px)}
+.hero-l{background:var(--sand);padding:72px 48px 72px max(24px,calc((100vw - 1060px)/2 + 24px));display:flex;flex-direction:column;justify-content:center}
+.hero-r{background:var(--ink2);padding:72px 40px;display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--gold)}
+.hello{font-weight:600;color:var(--gold-dk);margin-bottom:6px}
+h1{font-family:var(--name);font-size:clamp(2.2rem,5.2vw,4.8rem);font-weight:600;letter-spacing:.08em;line-height:1;white-space:nowrap;margin-bottom:14px;color:var(--ink)}
+.role{font-family:var(--head);font-size:1.3rem;letter-spacing:.1em;color:var(--ink);margin-bottom:22px}
+.hero-l p.txt{max-width:46ch;margin-bottom:28px;color:var(--mute-d)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:6px 16px;border:1.5px solid var(--gold);border-radius:999px;font-size:.9rem;font-weight:500;color:var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+.badge:hover{transform:translateY(-2px);background:rgba(184,146,74,.14);box-shadow:0 4px 14px rgba(184,146,74,.35)}
+.dot{width:9px;height:9px;border-radius:50%;background:#2F9E6E;animation:ping 1.8s ease-out infinite}
+.badge:nth-child(2) .dot{animation-delay:.6s}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,158,110,.65)}100%{box-shadow:0 0 0 10px rgba(47,158,110,0)}}
+.btns,.links{display:flex;gap:14px;flex-wrap:wrap}
+
+/* buttons with cursor glow */
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-block;padding:13px 26px;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:background .2s,color .2s,box-shadow .25s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .25s;background:radial-gradient(circle 90px at var(--mx,50%) var(--my,50%),rgba(255,232,170,.95),transparent 70%)}
+.btn:hover::before{opacity:1}
+.btn:hover{box-shadow:0 0 0 1px var(--gold),0 0 26px rgba(217,184,114,.75)}
+.btn.solid{background:var(--ink);color:var(--sand)}
+.btn.solid:hover{color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--sand)}
+.dark .btn{border-color:var(--gold-lt);color:var(--gold-lt)}
+.dark .btn.solid{background:var(--gold-lt);color:var(--ink)}
+.light .btn.ghost{color:var(--ink)}
+
+.stack{max-width:460px}
+.stack h3{font-size:1.15rem;font-weight:500;letter-spacing:.1em;color:var(--gold-lt);margin-bottom:18px}
+.stack ul{list-style:none}
+.stack li{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(233,239,234,.15);color:var(--text-l);font-size:1.1rem}
+.stack li span{color:var(--mute-l);font-size:.92rem;text-align:right}
+.reveal{opacity:0;transform:translateY(14px);animation:rise .8s ease forwards}
+.hero-r .reveal{animation-delay:.25s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.two p+p{margin-top:16px}
+.grp+.grp{margin-top:24px}
+.light{--acc:var(--gold)}
+.dark{--acc:var(--gold-lt)}
+.grp h3{display:inline-block;padding-bottom:5px;margin-bottom:12px;font-size:1.05rem;font-weight:500;letter-spacing:.08em;background:linear-gradient(var(--acc),var(--acc)) no-repeat 0 100%/28px 2px;transition:background-size .4s ease,letter-spacing .3s ease}
+.grp:hover h3{background-size:100% 2px;letter-spacing:.11em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{padding:6px 15px;border-radius:6px;font-size:.93rem;font-weight:500;cursor:default;transition:transform .25s ease,background .25s,color .25s,box-shadow .25s,border-color .25s}
+.chips li:hover{transform:translateY(-3px) scale(1.05)}
+.light .chips li{background:var(--sand2);color:var(--ink)}
+.light .chips li:hover{background:var(--ink);color:var(--sand);box-shadow:0 8px 16px rgba(16,41,43,.28)}
+.dark .chips li{background:rgba(233,239,234,.09);color:var(--text-l);border:1px solid rgba(217,184,114,.4)}
+.dark .chips li:hover{background:var(--gold-lt);color:var(--ink);border-color:var(--gold-lt);box-shadow:0 0 18px rgba(217,184,114,.65)}
+.js .grp:not(.in) h3,.js .grp:not(.in) .chips li{opacity:0}
+.grp.in h3{animation:slideIn .5s ease backwards}
+.grp.in .chips li{animation:chipIn .5s ease backwards;animation-delay:calc(var(--i,0)*70ms + 150ms)}
+@keyframes slideIn{from{opacity:0;transform:translateX(-14px)}}
+@keyframes chipIn{from{opacity:0;transform:translateY(12px) scale(.94)}}
+
+/* cards (education, certificates) */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:28px}
+.card{border:1px solid rgba(217,184,114,.4);border-radius:10px;padding:24px;background:rgba(233,239,234,.04)}
+.card h3{font-size:1.15rem;font-weight:500;color:var(--text-l);margin-bottom:4px}
+.card .when{color:var(--gold-lt);font-weight:500;margin-bottom:8px}
+.card p+p{margin-top:4px}
+
+/* projects with glowing panels */
+.project{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;padding:38px 0;border-top:1px solid rgba(233,239,234,.15);align-items:center}
+.project:nth-of-type(even){grid-template-columns:1fr 1.1fr}
+.project:nth-of-type(even) .shot{order:2}
+.project h3{font-size:1.6rem;font-weight:500;margin-bottom:10px;color:var(--text-l)}
+.project ul.pts{padding-left:18px;margin:14px 0 16px}
+.project ul.pts li+li{margin-top:4px}
+.plinks a{font-weight:600;color:var(--gold-lt);text-underline-offset:4px}
+.plinks a:hover{color:var(--text-l)}
+.shot{position:relative;overflow:hidden;aspect-ratio:16/10;border-radius:12px;background:#08191B;border:1px solid rgba(217,184,114,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;box-shadow:0 0 28px rgba(217,184,114,.25),inset 0 0 40px rgba(217,184,114,.08);animation:pulse 4s ease-in-out infinite;transition:border-color .3s}
+.shot::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(217,184,114,.5),transparent 65%);filter:blur(22px);animation:drift 7s ease-in-out infinite alternate}
+.shot b,.shot span{position:relative}
+.shot b{font-family:var(--head);font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:500;letter-spacing:.08em;color:var(--text-l);text-shadow:0 0 20px rgba(217,184,114,.9)}
+.shot span{color:var(--mute-l);font-size:.95rem;margin-top:6px}
+.project:hover .shot{border-color:var(--gold-lt)}
+@keyframes pulse{50%{box-shadow:0 0 46px rgba(217,184,114,.45),inset 0 0 50px rgba(217,184,114,.14)}}
+@keyframes drift{from{transform:translate(-18%,-10%)}to{transform:translate(18%,10%)}}
+
+/* internship on light */
+.role-card{border-left:3px solid var(--gold);padding:2px 0 2px 24px;max-width:720px;margin-top:28px}
+.role-card h3{font-size:1.4rem;font-weight:500;color:var(--ink)}
+.role-card .when{color:var(--gold-dk);font-weight:500;margin:4px 0 12px}
+.role-card ul{padding-left:18px}
+.role-card li+li{margin-top:6px}
+
+footer{background:var(--ink);color:var(--mute-l);padding:30px 0;font-size:.92rem;border-top:3px solid var(--gold)}
+
+@media (max-width:860px){
+  section{padding:64px 0}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-l,.hero-r{padding:56px 24px}
+  .hero-r{border-left:0;border-top:4px solid var(--gold)}
+  .two,.project,.project:nth-of-type(even){grid-template-columns:1fr;gap:28px}
+  .project:nth-of-type(even) .shot{order:0}
+  nav ul{gap:12px}
+  nav ul a{font-size:.8rem}
+  .logo{font-size:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{animation:none;opacity:1;transform:none}
+  .shot,.shot::before{animation:none}
+  .dot{animation:none}
+  .grp h3,.grp .chips li{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="#top">PRIYANKA</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Internship</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-l">
+      <p class="hello">Hi, I'm</p>
+      <h1 class="reveal">PRIYANKA R</h1>
+      <p class="role">BCA Graduate | Aspiring Data Analyst</p>
+      <div class="badges">
+        <span class="badge"><i class="dot"></i>Fresher</span>
+        <span class="badge"><i class="dot"></i>Open to entry-level opportunities</span>
+        <span class="badge"><i class="dot"></i>Open to remote</span>
+      </div>
+      <p class="txt">I like turning data into clear dashboards and simple models. I work with Python, SQL, Power BI and Excel.</p>
+      <div class="btns">
+        <a class="btn solid" href="#projects">View my projects</a>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="stack reveal">
+        <h3>What I work with</h3>
+        <ul>
+          <li>Python <span>Pandas, NumPy, Matplotlib, Seaborn</span></li>
+          <li>SQL <span>MySQL Workbench</span></li>
+          <li>Power BI <span>DAX, filters</span></li>
+          <li>Tableau <span>Dashboards</span></li>
+          <li>Excel <span>Pivot, VLOOKUP</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="light">
+    <div class="wrap">
+      <h2>About me</h2>
+      <div class="two" style="margin-top:28px">
+        <div>
+          <p>I'm a motivated BCA graduate with a strong foundation in computer applications, programming, SQL, Excel and data analysis.</p>
+          <p>I'm looking for an entry-level role in IT or data where I can use my technical skills, learn new technologies, handle data efficiently and grow with the team.</p>
+        </div>
+        <div>
+          <div class="grp">
+            <h3>Domain of interest</h3>
+            <ul class="chips"><li>Data Analysis</li><li>Data Visualization</li><li>Database Management</li></ul>
+          </div>
+          <div class="grp">
+            <h3>Soft skills</h3>
+            <ul class="chips"><li>Quick Learner</li><li>Problem Solving</li><li>Communication</li><li>Teamwork</li><li>Adaptability</li></ul>
+          </div>
+          <div class="grp">
+            <h3>Languages</h3>
+            <ul class="chips"><li>Tamil</li><li>English</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="dark">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p class="when">October 2023 to May 2026</p>
+          <p>Indira Gandhi College of Arts and Science</p>
+          <p>Affiliated to Pondicherry University</p>
+          <p>CGPA: 7.05</p>
+        </div>
+        <div class="card">
+          <h3>Higher Secondary School (HSC)</h3>
+          <p class="when">June 2022 to March 2023</p>
+          <p>Immaculate Heart of Mary Higher Secondary School</p>
+          <p>Percentage: 92%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="light">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="two" style="margin-top:28px">
+        <div>
+          <div class="grp">
+            <h3>Programming and analysis</h3>
+            <ul class="chips"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>SQL</li></ul>
+          </div>
+          <div class="grp">
+            <h3>Visualization</h3>
+            <ul class="chips"><li>Power BI</li><li>Tableau</li><li>Advanced Excel (Pivot, VLOOKUP)</li></ul>
+          </div>
+        </div>
+        <div>
+          <div class="grp">
+            <h3>Tools</h3>
+            <ul class="chips"><li>VS Code</li><li>MySQL Workbench</li><li>Google Colab</li><li>MS Office</li></ul>
+          </div>
+          <div class="grp">
+            <h3>Web basics</h3>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript (basic)</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="dark">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="lead">Two projects I built: a dashboard and a prediction tool.</p>
+
+      <article class="project">
+        <div class="shot" role="img" aria-label="Power BI Netflix dashboard project">
+          <b>Power BI</b><span>Netflix content dashboard</span>
+        </div>
+        <div>
+          <h3>Netflix Dashboard</h3>
+          <ul class="chips"><li>Power BI</li><li>DAX</li><li>Data Visualization</li></ul>
+          <ul class="pts">
+            <li>Interactive dashboard visualising Netflix content data: genres, ratings, release trends and more.</li>
+            <li>Used DAX and filters for dynamic insights, and presented key metrics visually.</li>
+          </ul>
+          <div class="plinks"><a href="https://github.com/Priyanka-R05/Netflix-dashboard-Power-BI" target="_blank" rel="noopener">View on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot" role="img" aria-label="Python E-Commerce sales analysis project">
+          <b>Python</b><span>Sales analysis and prediction</span>
+        </div>
+        <div>
+          <h3>E-Commerce Sales Analysis</h3>
+          <ul class="chips"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Tkinter</li></ul>
+          <ul class="pts">
+            <li>Analysed sales data with Python, Pandas and NumPy, and built visualisations with Matplotlib.</li>
+            <li>Developed a Linear Regression model to predict sales, with a Tkinter GUI to try it out.</li>
+          </ul>
+          <div class="plinks"><a href="https://github.com/Priyanka-R05/E-Commerce-Sales-Analysis" target="_blank" rel="noopener">View on GitHub</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" class="light">
+    <div class="wrap">
+      <h2>Internship</h2>
+      <div class="role-card">
+        <h3>Web Technologies, ASKAN Technologies Pvt. Ltd.</h3>
+        <p class="when">June to July 2025</p>
+        <ul>
+          <li>Assisted in developing responsive web pages using HTML and CSS, and implemented basic interactive features using JavaScript.</li>
+          <li>Worked on front-end development tasks, strengthening communication and teamwork skills in a professional environment.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="dark">
+    <div class="wrap">
+      <h2>Certificates</h2>
+      <div class="cards">
+        <div class="card"><h3>AI Python for Beginners</h3><p>DeepLearning.AI on Coursera</p></div>
+        <div class="card"><h3>AI Fundamentals</h3><p>IBM SkillsBuild</p></div>
+        <div class="card"><h3>Project Management Fundamentals</h3><p>IBM SkillsBuild</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="light">
+    <div class="wrap">
+      <h2>Let's connect</h2>
+      <p class="lead" style="margin-top:20px">I'm looking for entry-level roles in IT and data. If you have an opening or want to talk about a project, write to me.</p>
+      <div class="links">
+        <a class="btn solid" href="mailto:priyankaprr056@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/Priyanka-R05" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/priyanka-r-b8965435b" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p style="margin-top:22px">Thavalakuppam, Puducherry</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 <span class="nm">Priyanka R</span>. Built with HTML and CSS.</div>
+</footer>
+
+<script>
+document.querySelectorAll('.chips').forEach(function(ul){
+  ul.querySelectorAll('li').forEach(function(li,i){li.style.setProperty('--i',i);});
+});
+var groups=document.querySelectorAll('.grp');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.2});
+  groups.forEach(function(g){io.observe(g);});
+}else{groups.forEach(function(g){g.classList.add('in');});}
+document.querySelectorAll('.btn').forEach(function(b){
+  b.addEventListener('mousemove',function(e){
+    var r=b.getBoundingClientRect();
+    b.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    b.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
+</script>
+</body>
+</html>
